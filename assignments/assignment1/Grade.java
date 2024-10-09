@@ -36,6 +36,36 @@ public class Grade {
     }
 
 
+    public int[] roundGrades(int[] grades){
+        ArrayList<Integer> roundedGradesList = new ArrayList<>();
+        Arrays.sort(grades);
+        for(int grade:grades){
+            if(grade>=38){
+                int nextMultipleOf5=((grade/5)+1)*5;
+                if(nextMultipleOf5-grade<3){
+                    roundedGradesList.add(nextMultipleOf5);
+                }else{
+                    roundedGradesList.add(grade);
+                }
+            }else{
+                roundedGradesList.add(grade);
+            }
+
+        }
+        int[] roundedGrades= new int[roundedGradesList.size()];
+        for(int i=0;i<roundedGradesList.size();i++){
+            roundedGrades[i]=roundedGradesList.get(i);
+        }
+        return roundedGrades;
+
+    }
+
+    public int greatestRoundedGrade(int[] grades){
+        int[] roundedGrades=roundGrades(grades);
+        Arrays.sort(roundedGrades);
+        return roundedGrades[roundedGrades.length-1];
+    }
+
 
 
 

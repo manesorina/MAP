@@ -22,6 +22,21 @@ public class Grade {
 
     }
 
+    public String calculateAverageValue(int[] grades){
+        int sum=0;
+
+        for(int grade:grades){
+            sum+=grade;
+        }
+
+        int numberOfNotes=grades.length;
+        double averageV=(double) sum/numberOfNotes;
+        return String.format("%.2f",averageV);
+
+    }
+
+
+
 
 
 

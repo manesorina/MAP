@@ -22,10 +22,11 @@ public class Main{
 
         System.out.print("\n"+ "\n"+"Ex2");
         int[] numbers={17,4,3,8,10};
-        ArrayEx arrayObject=new ArrayEx(numbers);
+        ArrayEx1 arrayObject=new ArrayEx1(numbers);
         System.out.print("The greatest value in the array is: "+arrayObject.maxValue()+"\n");
         System.out.print("The smallest value in the array is: "+arrayObject.minValue()+"\n");
-        System.out.print("The sum of n-1 numbers is: "+arrayObject.maxSum()+"\n");
+        System.out.print("The max sum of n-1 numbers is: "+arrayObject.maxSum()+"\n");
+        System.out.print("The min sum of n-1 numbers is: "+arrayObject.minSum()+"\n");
 
 
 

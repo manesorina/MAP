@@ -60,6 +60,17 @@ public class Main{
         }
 
 
+        System.out.print("\n"+"Ex 4"+"\n");
+        int[] keyboards={20,15,25,35};
+        int[] usbDrives={20,15,40,15};
+
+        int[] keyboards2={40,60,50};
+        int[] usbDrives2={8,12};
+        ElektronikShop ekShop=new ElektronikShop(keyboards, usbDrives);
+        System.out.print("Cheapest keyboard is: "+ekShop.cheapestKeyboard(keyboards)+"\n");
+        System.out.print("Most expensive device: "+ekShop.mostExpensive(keyboards,usbDrives)+"\n");
+        System.out.println("Most expensive usb that Markus affords is: "+ekShop.expensiveInBudget(usbDrives,20));
+        System.out.println("The most expensive keyboard+usbDrive package that Markus affords is: "+ekShop.totalMaxSpent(keyboards2,usbDrives2,60));
     }
 
 

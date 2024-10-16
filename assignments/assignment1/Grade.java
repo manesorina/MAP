@@ -29,8 +29,7 @@ public class Grade {
             sum+=grade;
         }
 
-        int numberOfNotes=grades.length;
-        double averageV=(double) sum/numberOfNotes;
+        double averageV=(double) sum/grades.length;
         return String.format("%.2f",averageV);
 
     }

@@ -2,38 +2,57 @@ import java.util.Arrays;
 public class ArrayEx1 {
 
     int[] numbers;
-    int[] sortedArray;
+
 
     public ArrayEx1(int[] numbers){
         this.numbers=numbers;
-        this.sortedArray=Arrays.copyOf(numbers,numbers.length);
-        Arrays.sort(this.sortedArray);
     }
 
     public int maxValue(){
-        return sortedArray[sortedArray.length-1];
+        int max=0;
+        for(int i=0;i<=numbers.length-1;i++){
+            if(numbers[i]>max){
+                max=numbers[i];
+            }
+            i++;
+        }
+        return max;
 
     }
 
     public int minValue(){
-        return sortedArray[0];
+        int min=numbers[0];
+        for(int i=0;i<numbers.length-1;i++){
 
+            if(numbers[i]<min){
+                min=numbers[i];
+            }
+
+        }
+        return min;
     }
 
     public int maxSum(){
         int sum=0;
-        for(int i=sortedArray.length-1;i>0;i--){
-            sum+=sortedArray[i];
+        for(int i=0;i<=numbers.length-1;i++){
+            sum+=numbers[i];
         }
-        return sum;
+
+        return sum-minValue();
     }
+
+    //public int minSum(){
+    //    return maxSum()+minValue()-maxValue();
+    //}
 
     public int minSum(){
         int sum=0;
-        for(int i=0;i<sortedArray.length-1;i++){
-            sum+=sortedArray[i];
+        for(int i=0;i<=numbers.length-1;i++){
+            sum+=numbers[i];
         }
-        return sum;
+
+        return sum-maxValue();
     }
+
 
 }

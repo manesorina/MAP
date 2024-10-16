@@ -1,11 +1,11 @@
 import java.util.Arrays;
-import java.math.MathContext;
+
 public class ElektronikShop {
     int[] keyboards;
-    int[] usbDirves;
+    int[] usbDrives;
 
-    public ElektronikShop(int[] keyboards,int[] usbDirves){
-        this.usbDirves=usbDirves;
+    public ElektronikShop(int[] keyboards,int[] usbDrives){
+        this.usbDrives=usbDrives;
         this.keyboards=keyboards;
     }
 
@@ -14,20 +14,20 @@ public class ElektronikShop {
         return keyboards[0];
     }
 
-    public int mostExpensive(int[] keyboards, int[] usbDirves){
+    public int mostExpensive(int[] keyboards, int[] usbDrives){
         Arrays.sort(keyboards);
-        Arrays.sort(usbDirves);
-        return Math.max(keyboards[keyboards.length-1],usbDirves[usbDirves.length-1]);
+        Arrays.sort(usbDrives);
+        return Math.max(keyboards[keyboards.length-1],usbDrives[usbDrives.length-1]);
     }
 
-    public int expensiveInBudget(int[] usbDirves,int budget){
-        Arrays.sort(usbDirves);
+    public int expensiveInBudget(int[] usbDrives,int budget){
+        Arrays.sort(usbDrives);
         int inBudget=0;
-        for(int i=0;i<usbDirves.length;i++){
-            while(usbDirves[i]<=budget){
+        for(int i=0;i<usbDrives.length;i++){
+            while(usbDrives[i]<=budget){
                 i++;
             }
-            inBudget=usbDirves[i];
+            inBudget=usbDrives[i];
         }
         return inBudget;
 

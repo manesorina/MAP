@@ -42,7 +42,7 @@ public class Main{
         System.out.print("\n"+"The difference is: "+"\n");
 
         int[] arr3={8,3,0, 0, 0, 0, 0, 0, 0};
-        int[] arr4={5,4, 0, 0, 0, 0, 0, 0, 0};
+        int[] arr4={5,4, 1, 0, 0, 0, 0, 0, 0};
         for(int num:arrayEx2.calculateDifference(arr3,arr4)){
             System.out.print(num+" ");
         }
